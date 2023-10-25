@@ -1,0 +1,16 @@
+syntax = "proto2";
+package fcore;
+
+service Write {
+  rpc grpc_write (WriteRequest) returns (WriteResponse) {}
+}
+
+message WriteRequest {
+  required string giid = 1;
+  required string write_value = 2;
+}
+
+message WriteResponse {
+  optional string giid = 1;
+  required bool   write_success = 2;
+} 

@@ -1,0 +1,3 @@
+#define FCore_VERSION_MAJOR @feel_core_VERSION_MAJOR@
+#define FCore_VERSION_MINOR @feel_core_VERSION_MINOR@
+#define FCore_VERSION_PATCH @feel_core_VERSION_PATCH@

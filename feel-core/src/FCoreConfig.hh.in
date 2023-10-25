@@ -1,0 +1,10 @@
+#define FCore_DEFAULT_PORT "@FCore_DEFAULT_PORT@"
+#define FCore_DEFAULT_HOST "@FCore_DEFAULT_HOST@"
+#define CONFDIR            "@CONFDIR@"
+#define DATADIR            "@DATADIR@"
+#define BASEDIR            "@BASEDIR@"
+
+#define PLUGIN_X           "@PLUGIN_X@"
+#define PLUGIN_X_PATH      "@PLUGIN_X_PATH@"
+#define PLUGIN_Y           "@PLUGIN_Y@"
+#define PLUGIN_Y_PATH      "@PLUGIN_Y_PATH@"

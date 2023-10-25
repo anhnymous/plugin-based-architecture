@@ -1,0 +1,3 @@
+#define FFeature_VERSION_MAJOR @feel_feature_VERSION_MAJOR@
+#define FFeature_VERSION_MINOR @feel_feature_VERSION_MINOR@
+#define FFeature_VERSION_PATCH @feel_feature_VERSION_PATCH@

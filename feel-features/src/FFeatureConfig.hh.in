@@ -1,0 +1,2 @@
+#define FCore_SERVER_PORT "@FCore_SERVER_PORT@"
+#define FCore_SERVER_HOST "@FCore_SERVER_HOST@"

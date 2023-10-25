@@ -1,0 +1,16 @@
+syntax = "proto2";
+package fcore;
+
+service Read {
+  rpc grpc_read (ReadRequest) returns (ReadResponse) {}
+}
+
+message ReadRequest {
+  required string giid = 1;
+}
+
+message ReadResponse {
+  optional string giid = 1;
+  required bool   read_success = 2;
+  required string read_value = 3;
+} 
