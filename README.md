@@ -21,23 +21,16 @@ This project also employs some techniques and concepts like:
 `remote invocations`
 `dynamic library loading using dlopen APIs`
 
+Directory structures
+--------------------
 
-Directory structures:
-
-design/        brief introduction about the design of this PoC along with some captures
-               of simple system design, components design and their relationships.
-
-feel-core/     provide gRPC server and services that forms communication bridges from
-               `feel-features` to `feel-plugins`.
-
-feel-features/ features or applications that make use of remote interfaces implemented
-               by `feel-plugins`.
-
-feel-plugins/  provides plugins (Linux shared libs, i.e. .so files)
-
-fips/          tells `feel-core` that it wants to install/uninstall features, this module
-               is not supported yet in phase 1. The communication between `fips` and
-               `feel-core` can be REST APIs.
+| Directory         | Brief explanation                                              |
+|:------------------|:---------------------------------------------------------------|
+| design/           | brief introduction about the design of this PoC along with some captures of simple system design, components design and their relationships. |
+| feel-core/        | provide gRPC server and services that forms communication bridges from `feel-features` to `feel-plugins`. |
+| feel-features/    | features or applications that make use of remote interfaces implemented by `feel-plugins`. |
+| feel-plugins/     | provides plugins (Linux shared libs, i.e. .so files). |
+| fips/             | tells `feel-core` that it wants to install/uninstall features is not supported yet in phase 1. The communication between `fips` and `feel-core` can be REST APIs. |
 
 
 ### Dependencies
@@ -51,35 +44,40 @@ See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-nlohmann-json
 ### How to build
 #### Build feel-core
 ```bash
-cd feel-core
-./build_conan.sh
+$ cd feel-core
+$ ./build_conan.sh
 ``` 
 
 #### Build feel-features
 ```bash
-cd feel-features
-./build_conan.sh
+$ cd feel-features
+$ ./build_conan.sh
 ``` 
 
 #### Build feel-plugins
 ```
-cd feel-plugins
-./compile.sh
+$ cd feel-plugins
+$ ./compile.sh
 ```
 
 
 ### How to test
 #### Start feel-core
 ```bash
-cd feel-core
-./test_feel_core.sh (follow instructions)
-./feel_core
+$ cd feel-core
+$ ./test_feel_core.sh (follow instructions)
+$ ./feel_core
 ```
 
 #### Start feel-features
 ```bash
 cd feel-features
-./test_feel_feature.sh (follow instructions)
-./feel_feature -f X & (start feature X)
-./feel_feature -f Y   (start feature Y)
+$ ./test_feel_feature.sh (follow instructions)
+$ ./feel_feature -f X    (start feature X)
+$ ./feel_feature -f Y    (start feature Y)
+```
+
+#### Watch feel-core logs
+```
+$ tail -f feel-core/build-conan/bin/logs/fcore/technical.log.dev
 ```
