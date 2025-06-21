@@ -72,5 +72,5 @@ class FCore(ConanFile):
   def package(self):
     self.copy("feel_core", src="bin", dst="bin")
 
-  def packae_info(self):
+  def package_info(self):
     pass  # we don't publish this package as conan lib

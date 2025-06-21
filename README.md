@@ -34,11 +34,19 @@ Directory structures
 
 
 ### Dependencies
+#### Conan
+This project was tested with Conan 1.64.0
+```bash
+sudo pip install conan
+sudo pip install --upgrade 'conan==1.64'
+conan --version
+```
+
 #### Conan package grpc/v1.50.0
-See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-grpc 
+See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-grpc
 
 #### Conan package nlohmann-json/v3.11.2
-See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-nlohmann-json 
+See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-nlohmann-json
 
 
 ### How to build
@@ -46,13 +54,13 @@ See: https://github.com/anhnymous/conan-pkgs/tree/master/conan-nlohmann-json
 ```bash
 $ cd feel-core
 $ ./build_conan.sh
-``` 
+```
 
 #### Build feel-features
 ```bash
 $ cd feel-features
 $ ./build_conan.sh
-``` 
+```
 
 #### Build feel-plugins
 ```
